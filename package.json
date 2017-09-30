@@ -1,0 +1,21 @@
+{
+  "name": "express-crypto",
+  "version": "0.0.1",
+  "description": "A middleware for node express to encrypt the transmitted content in rest calls",
+  "main": "index.js",
+  "contributors": [
+    {
+      "name": "Martin Wiesmüller",
+      "email": "m.wiesmueller@werbasinnotec.com"
+    }
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mwiesmueller/express-crypto.git"
+  },
+  "author": "Martin Wiesmüller <martin.wiesmueller@werbas-ag.com> (werbasinnotec.com)",
+  "license": "MIT"
+}
