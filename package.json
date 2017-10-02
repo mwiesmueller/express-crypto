@@ -2,7 +2,7 @@
   "name": "express-crypto",
   "version": "0.0.1",
   "description": "A middleware for node express to encrypt the transmitted content in rest calls",
-  "main": "index.js",
+  "main": "lib/index.js",
   "contributors": [
     {
       "name": "Martin Wiesmüller",
@@ -17,5 +17,22 @@
     "url": "git@github.com:mwiesmueller/express-crypto.git"
   },
   "author": "Martin Wiesmüller <martin.wiesmueller@werbas-ag.com> (werbasinnotec.com)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "crypto-js": "3.1.9-1",
+    "express-mung": "0.4.6"
+  },
+  "devDependencies": {
+    "assertthat": "0.10.3",
+    "express": "4.16.1",
+    "gulp": "3.9.1",
+    "gulp-coverage": "0.3.38",
+    "gulp-eslint": "4.0.0",
+    "gulp-mocha": "4.3.1",
+    "gulp-shell": "0.6.3",
+    "method-override": "2.3.10",
+    "morgan": "1.9.0",
+    "request": "2.83.0"
+  }
 }
