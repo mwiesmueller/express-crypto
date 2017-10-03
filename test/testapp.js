@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(log('dev'));
 app.use(methodOverride());
-app.use(crypto({ secret: 'secret123' }, app));
+app.use(crypto({ secret: 'secret123', debug: true }, app));
 
 app.post('/test', (req, res) => {
   if (req.body.foo === 'not encrypted') {
