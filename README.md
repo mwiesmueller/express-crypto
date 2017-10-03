@@ -42,6 +42,7 @@ In the first propertie it's necessary to define the configuration for `express-c
 - secret: Define the Secret for the encryption.
 - warningheader: Define a warningheader for the response when the request is not encrypted. Set it to false do deactivate. Default is `This service supports an encrypted content in all rest calls. Please contact us for maximum of security!`
 - limit: Define the content limit. Default is `10mb`
+- debug: Set it to true when you like debug information in console
 
 
 ## Call an encrypted REST calls
