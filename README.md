@@ -46,7 +46,7 @@ In the first propertie it's necessary to define the configuration for `express-c
 
 ## Call an encrypted REST calls
 
-This middleware module validate the `content-type` and the additional `content-encrypted` header in the request. If the `content-type` equal `application/octet-stream` and the `content-encrypted` equal `aes` this module expect an encrypted content. So the module will decrypt the content from request and encrypt the response with the defined secret.
+This middleware module validate the `content-type` and the additional `content-encrypted` header in the request. If the `content-type` equal `application/text` and the `content-encrypted` equal `aes` this module expect an encrypted content. So the module will decrypt the content from request and encrypt the response with the defined secret.
 
 The big advantage of this module is the definition in the middleware of `express`. So you can work with your decrypted Objects in all the routes of the API.
 

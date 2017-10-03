@@ -53,7 +53,7 @@ describe('... Test module in Express', () => {
   });
 
   it('... request a encrypted content when the header are changed to encrypted', (done) => {
-    request({ url: 'http://127.0.0.1:8090/test', method: 'POST', json: true, headers: { 'content-type': 'application/octet-stream', 'content-encrypted': 'aes' }, body: 'U2FsdGVkX1+9nwrZMT8J4FaqSO8uBnZXUCGqHJqQpDm6+wldX9gxgy9jBtTR/9dS' }, (err, res) => {
+    request({ url: 'http://127.0.0.1:8090/test', method: 'POST', json: true, headers: { 'content-type': 'application/text', 'content-encrypted': 'aes' }, body: 'U2FsdGVkX1+9nwrZMT8J4FaqSO8uBnZXUCGqHJqQpDm6+wldX9gxgy9jBtTR/9dS' }, (err, res) => {
       if (err) {
         throw err;
       }
