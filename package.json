@@ -19,7 +19,9 @@
   "author": "Martin Wiesmüller <martin.wiesmueller@werbas-ag.com> (werbasinnotec.com)",
   "license": "MIT",
   "dependencies": {
+    "atob": "2.1.1",
     "body-parser": "1.18.2",
+    "btoa": "1.2.1",
     "crypto-js": "3.1.9-1",
     "express-mung": "0.4.6"
   },

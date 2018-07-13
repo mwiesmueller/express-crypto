@@ -25,7 +25,7 @@ app.post('/test', (req, res) => {
     return res.status(201).send({ foo: 'bar' });
   }
 
-  res.status(200).send({ hello: 'world' });
+  res.status(200).send(req.body);
 });
 
 server.listen(8090, (err) => {

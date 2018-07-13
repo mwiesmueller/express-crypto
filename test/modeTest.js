@@ -2,7 +2,7 @@
 
 const assert = require('assertthat');
 const request = require('request');
-const CryptoJS = require('crypto-js');
+const crypt = require('../lib/crypt');
 
 const crypto = require('../lib');
 
@@ -53,13 +53,12 @@ describe('... Test module in Express', () => {
   });
 
   it('... request a encrypted content when the header are changed to encrypted', (done) => {
-    request({ url: 'http://127.0.0.1:8090/test', method: 'POST', json: true, headers: { 'content-type': 'application/text', 'content-encrypted': 'aes' }, body: 'U2FsdGVkX1+9nwrZMT8J4FaqSO8uBnZXUCGqHJqQpDm6+wldX9gxgy9jBtTR/9dS' }, (err, res) => {
+    request({ url: 'http://127.0.0.1:8090/test', method: 'POST', json: true, headers: { 'content-type': 'application/text', 'content-encrypted': 'aes' }, body: 'mF4ndiwq9K0q924GRFXa3sn1zBOjXLM5wOUB2sAO0V2l6nf2qd2qTUsLqbCvKs7sUMvyFD8rbbjPCLXHWyTwaBRdlTDFXZNi+tGHGEA1Xk8=' }, (err, res) => {
       if (err) {
         throw err;
       }
 
-      const bytes = CryptoJS.AES.decrypt(res.body.toString(), 'secret123');
-      const body = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
+      const body = JSON.parse(crypt.decrypt(res.body, 'secret123'));
 
       assert.that(res.headers.warning).is.undefined();
       assert.that(body).is.equalTo({ hello: 'world' });
