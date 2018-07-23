@@ -1,6 +1,6 @@
 {
   "name": "express-crypto",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A middleware for node express to encrypt the transmitted content in rest calls",
   "main": "lib/index.js",
   "contributors": [
